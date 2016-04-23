@@ -43,6 +43,8 @@ int main() {
 	auto b = Gpio(4, true, false);
 	auto aa = Aio(0);
 
+//	auto dustSensor=Gpio(8, true, false);
+
 	/* Code in this loop will run repeatedly
 	 */
 	for (;;) {
@@ -64,10 +66,10 @@ int main() {
 		lcd->write(string(t));
 
 		//getData() can take 30 seconds to run
-//		data = dust->getData();
-//		cout << "Low pulse occupancy: " << data.lowPulseOccupancy << endl;
-//		cout << "Ratio: " << data.ratio << endl;
-//		cout << "Concentration: " << data.concentration << endl;
+		data = dust->getData();
+		cout << "Low pulse occupancy: " << data.lowPulseOccupancy << endl;
+		cout << "Ratio: " << data.ratio << endl;
+		cout << "Concentration: " << data.concentration << endl;
 
 		sleep(2); //goodnight
 	}
