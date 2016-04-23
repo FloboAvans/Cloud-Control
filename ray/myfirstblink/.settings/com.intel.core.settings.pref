@@ -1,0 +1,5 @@
+#
+#Sat Apr 23 17:28:03 CEST 2016
+com.intel.core.target.selection="192.168.43.96"
+com.intel.core.project.type.id="com.intel.iotdevkit.cdt.iotCDTNature"
+com.intel.core.project.description="IoT"

@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/CPATH/delimiter=\:
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/CPATH/operation=remove
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/CPLUS_INCLUDE_PATH/delimiter=\:
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/CPLUS_INCLUDE_PATH/operation=remove
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/C_INCLUDE_PATH/delimiter=\:
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/C_INCLUDE_PATH/operation=remove
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/append=true
+environment/buildEnvironmentInclude/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/appendContributed=true
+environment/buildEnvironmentLibrary/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/LIBRARY_PATH/delimiter=\:
+environment/buildEnvironmentLibrary/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/LIBRARY_PATH/operation=remove
+environment/buildEnvironmentLibrary/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/append=true
+environment/buildEnvironmentLibrary/com.intel.issiot.cdt.config.gnu.cross.exe.debug.987433513.1093040773/appendContributed=true
