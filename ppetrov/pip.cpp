@@ -20,8 +20,7 @@ void sig_handler(int signo)
 int main(int argc, char** argv)
 {
     if (argc < 2) {
-        printf("Provide an int arg if you want to flash on something 
-other than %d\n", DEFAULT_IOPIN);
+        printf("Provide an int arg if you want to flash on something other than %d\n", DEFAULT_IOPIN);
         iopin = DEFAULT_IOPIN;
     } else {
         iopin = strtol(argv[1], NULL, 10);
