@@ -49,6 +49,14 @@
  *
  * Additional linker flags: none
  */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+
+
 
 int main()
 {
@@ -63,10 +71,29 @@ int main()
 	std::cout << "Started!\n";
 	for (;;) {
 		int sensorValue = a0->read();
-		//std::cout << sensorValue << std::endl;
+		std::cout << "Raw sensorValue: " << sensorValue << std::endl;
 		float resistance=(float)(1023-sensorValue)*10000/sensorValue; //get the resistance of the sensor;
 		float temperature=1/(log(resistance/10000)/B+1/298.15)-273.15;//convert to temperature
 		std::cout << "Temperature: " << temperature << std::endl;
+
+	    int sockfd;
+	    struct sockaddr_in servaddr;
+	    std::string stringJSON = "{\"n\": \"temp\", \"v\": ";
+	    stringJSON.append(std::to_string(temperature));
+	    stringJSON.append("}\n");
+	    char json[100];
+	    strcpy(json, stringJSON.c_str());
+
+	    sockfd=socket(AF_INET,SOCK_DGRAM,0);
+	    bzero(&servaddr,sizeof(servaddr));
+	    servaddr.sin_family = AF_INET;
+	    servaddr.sin_addr.s_addr=inet_addr("127.0.0.1");
+	    servaddr.sin_port=htons(41234);
+
+	    sendto(sockfd,json,strlen(json),0,(struct sockaddr *)&servaddr,sizeof(servaddr));
+
+	    printf("Sent %s", json);
+
 		sleep(1);
 	}
 
