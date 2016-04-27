@@ -14,7 +14,7 @@ OBJREADGASSENSOR = $(SRCREADGASSENSOR:.c=.o)
 
 CFLAGS = -Wall -Wextra -std=gnu11
 
-LDFLAGS = -lmraa
+LDFLAGS = -lmraa -lm
 
 
 all:	$(BLINKLED) $(READSENSOR) $(READGASSENSOR)
