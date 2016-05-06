@@ -68,6 +68,7 @@ int main()
 		return mraa::ERROR_UNSPECIFIED;
 	}
 
+	a0->read(); //First value is bogus, so that is fixed now....
 	std::cout << "Started!\n";
 	for (;;) {
 		int sensorValue = a0->read();
