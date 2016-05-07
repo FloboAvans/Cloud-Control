@@ -4,11 +4,12 @@ project( TemperatureMRAA CXX )
 set( CMAKE_VERBOSE_MAKEFILE ON )
 set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y " )
 
-include_directories( /Users/hansklabbers/Dev/IoT/edison_media/iss-iot-mac/devkit-x86/sysroots/i586-poky-linux/usr/include/upm 
+include_directories( /Users/hansklabbers/Dev/IoT/edison_media/iss-iot-mac/devkit-x86/sysroots/i586-poky-linux/usr/include
+		/Users/hansklabbers/Dev/IoT/edison_media/iss-iot-mac/devkit-x86/sysroots/i586-poky-linux/usr/include/upm
 	/Users/hansklabbers/Dev/IoT/edison_media/iss-iot-mac/devkit-x86/sysroots/i586-poky-linux/usr/include/mraa
        	)
 
-add_executable( TemperatureMRAA src/temperatureMRAA.cpp )
+add_executable( TemperatureMRAA src/temperatureMRAA.cpp src/Socket.cpp src/Socket.h src/SocketException.h src/ClientSocket.cpp src/ClientSocket.h)
 target_link_libraries( TemperatureMRAA -lmraa )
 
 add_custom_command( TARGET TemperatureMRAA 
